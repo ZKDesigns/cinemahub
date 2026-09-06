@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filmové žánry — Svět filmů</title>
+  <meta name="description" content="Interaktivní průvodce filmovými žánry. Poznejte akční filmy, komedie, horory, sci-fi a další žánry s příklady kultovních filmů.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-icon">🎬</span>
+        <span class="logo-text">Filmové žánry</span>
+      </div>
+      <nav class="nav">
+        <a href="#genres">Žánry</a>
+        <a href="#about">O projektu</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Přepnout motiv">🌙</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <h1>Svět <span class="accent">filmových žánrů</span></h1>
+      <p class="hero-subtitle">Objevte rozmanitost kinematografie — od epických akčních filmů po hluboká dramata</p>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Hledat žánr... (např. horor)" autocomplete="off">
+        <span class="search-icon">🔍</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Genres Grid -->
+  <section class="genres-section" id="genres">
+    <div class="container">
+      <h2 class="section-title">Filmové žánry</h2>
+      <p class="section-desc">Klikněte na kartu pro více informací</p>
+      
+      <div class="genres-grid" id="genresGrid">
+        <!-- Cards will be rendered by JS -->
+      </div>
+      
+      <div class="no-results" id="noResults" hidden>
+        <p>Nic nebylo nalezeno 😕</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="genreModal" hidden>
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Zavřít">×</button>
+      <div class="modal-header">
+        <span class="modal-emoji" id="modalEmoji"></span>
+        <h2 id="modalTitle"></h2>
+      </div>
+      <p class="modal-description" id="modalDescription"></p>
+      <h3>Kultovní filmy</h3>
+      <ul class="movie-list" id="modalMovies"></ul>
+      <div class="modal-tags" id="modalTags"></div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2 class="section-title">O projektu</h2>
+      <div class="about-content">
+        <p>Tento web byl vytvořen jako otevřený projekt pro GitHub. Najdete zde hlavní žánry světové kinematografie s krátkými popisy a příklady ikonických filmů.</p>
+        <p>Projekt je plně statický — snadno jej můžete nasadit na <strong>GitHub Pages</strong>.</p>
+        <div class="about-links">
+          <a href="https://github.com" target="_blank" rel="noopener" class="btn">Repozitář na GitHubu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Vytvořeno s ❤️ pro milovníky filmu · 2026</p>
+      <p class="footer-note">Otevřený projekt · Můžete forknout a doplňovat</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
